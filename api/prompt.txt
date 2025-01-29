@@ -1,0 +1,11 @@
+curl -X POST "http://localhost:8000/generate_multimodal"
+-F "prompt=This is an MRI. You should identify the general location and type of tumor present?"
+-F "images=@/Users/james.sexton/ollama-multimodal/assets/brain-tumor-mri-dataset/Testing/glioma/Te-gl_0017.jpg"
+
+curl -X POST "http://localhost:8000/generate_multimodal"
+-F "prompt=This is an MRI in a coronal plane view. Identify the general location and type of tumor present."
+-F "images=@/Users/james.sexton/ollama-multimodal/assets/brain-tumor-mri-dataset/Testing/meningioma/Te-me_0014.jpg"
+
+curl -X POST "http://localhost:8000/generate_multimodal"
+-F "prompt=This is an image of a skin lesion. Determine whether this is cancerous. If it is, what type of cancer is it?"
+-F "images=@/Users/james.sexton/ollama-multimodal/assets/basal-cell-carcinoma.jpg"
